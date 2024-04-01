@@ -4,6 +4,8 @@ import cors from 'cors';
 require('dotenv').config();
 const app = express();
 
+const PORT = process.env.PORT || 3000; // Updated to use process.env.PORT
+
 app.use(cors());
 // Redirect root to Admin panel
 app.get('/', (_, res) => {
@@ -22,7 +24,7 @@ const start = async () => {
 
   // Add your own express routes here
 
-  app.listen(3000);
+  app.listen(PORT);
 };
 
 start();
