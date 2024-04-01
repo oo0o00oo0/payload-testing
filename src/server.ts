@@ -14,6 +14,7 @@ app.get('/', (_, res) => {
 
 const start = async () => {
   // Initialize Payload
+
   await payload.init({
     secret: process.env.PAYLOAD_SECRET,
     express: app,
